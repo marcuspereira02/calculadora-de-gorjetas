@@ -64,6 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ti_ValorConta"
             android:layout_width="match_parent"
             android:inputType="numberDecimal"
             android:layout_height="wrap_content"
@@ -98,6 +99,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ti_QtdPessoas"
             android:maxLength="3"
             android:inputType="number"
             android:layout_width="match_parent"
@@ -133,6 +135,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ti_Porcentagem"
             android:maxLength="3"
             android:inputType="number"
             android:layout_width="match_parent"
