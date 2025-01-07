@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/beige"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -31,6 +32,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="18sp"
         android:text="Preencha os campos abaixo para realizar o cálculo da sua conta"
         android:textColor="@color/black"
         android:layout_margin="10dp"
@@ -44,8 +46,8 @@
         android:layout_height="wrap_content"
         android:text="Digite o valor da conta:"
         android:textColor="@color/black"
-        android:textSize="16dp"
-        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:layout_marginTop="50dp"
         android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -65,6 +67,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ti_ValorConta"
+            android:drawableStart="@drawable/cash"
+            android:drawablePadding="15dp"
             android:layout_width="match_parent"
             android:inputType="numberDecimal"
             android:layout_height="wrap_content"
@@ -79,8 +83,8 @@
         android:layout_height="wrap_content"
         android:text="Quantidade de pessoas:"
         android:textColor="@color/black"
-        android:textSize="16dp"
-        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:layout_marginTop="25dp"
         android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ti_Layout"
@@ -100,6 +104,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ti_QtdPessoas"
+            android:drawableStart="@drawable/people"
+            android:drawablePadding="15dp"
             android:maxLength="3"
             android:inputType="number"
             android:layout_width="match_parent"
@@ -115,8 +121,8 @@
         android:layout_height="wrap_content"
         android:text="Porcentagem da gorjeta:"
         android:textColor="@color/black"
-        android:textSize="16dp"
-        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:layout_marginTop="25dp"
         android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ti_Layout2"
@@ -136,6 +142,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ti_Porcentagem"
+            android:drawableStart="@drawable/percentage"
+            android:drawablePadding="15dp"
             android:maxLength="3"
             android:inputType="number"
             android:layout_width="match_parent"
@@ -147,7 +155,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Limpar"
-        android:layout_width="160dp"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button"
         android:text="Limpar"
@@ -159,7 +167,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Calcular"
-        android:layout_width="160dp"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button2"
         android:textColor="@color/texts"
