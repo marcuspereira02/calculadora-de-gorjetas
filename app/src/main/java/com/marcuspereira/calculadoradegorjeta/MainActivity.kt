@@ -13,6 +13,8 @@ import com.google.android.material.textfield.TextInputEditText
 import java.text.NumberFormat
 import java.util.Locale
 
+const val KEY_MAIN_ACTIVITY = "MainActivity.Key"
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,21 +41,19 @@ class MainActivity : AppCompatActivity() {
             val valorContaF = valorConta.text.toString()
             val qtdPessoasF = qtdPessoas.text.toString()
             val porcentagemF = porcentagem.text.toString()
-            val formatador = NumberFormat.getCurrencyInstance(Locale("pt", "BR"))
 
-            if(valorContaF == "" || qtdPessoasF == "" || porcentagemF == "") {
+            if (valorContaF == "" || qtdPessoasF == "" || porcentagemF == "") {
                 Snackbar.make(valorConta, "Preencha todos os campos", Snackbar.LENGTH_LONG).show()
-            }else {
-                val totalGorjeta = valorContaF.toFloat() * (porcentagemF.toFloat() / 100)
+            } else {
+                val totalGorjeta =
+                    valorContaF.toFloat() * (porcentagemF.toFloat() / 100) / qtdPessoasF.toFloat()
                 val valorTotal = (valorContaF.toFloat() / qtdPessoasF.toFloat()) + totalGorjeta
 
-                val valorTotalFormatado = formatador.format(valorTotal)
-
                 val intent = Intent(this, ResultActivity::class.java)
-                intent.putExtra(KEY_RESULT_ACTIVITY, valorTotalFormatado)
-                intent.putExtra("VALOR_CONTA", valorContaF)
-                intent.putExtra("QTD_PESSOAS", qtdPessoasF)
-                intent.putExtra("PORCENTAGEM", porcentagemF)
+                intent.putExtra(KEY_RESULT_ACTIVITY, valorTotal)
+                intent.putExtra("VALOR_CONTA", valorContaF.toFloat())
+                intent.putExtra("QTD_PESSOAS", qtdPessoasF.toInt())
+                intent.putExtra("PORCENTAGEM", porcentagemF.toFloat())
                 startActivity(intent)
             }
 
