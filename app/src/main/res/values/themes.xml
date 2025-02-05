@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.CalculadoraDeGorjeta" parent="Base.Theme.CalculadoraDeGorjeta" />
+
+    <style name = "Title" parent="Widget.AppCompat.TextView">
+        <item name="android:text">Tip Easy</item>
+        <item name="android:fontFamily">@font/risque</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/texts</item>
+    </style>
 </resources>

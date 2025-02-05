@@ -3,174 +3,177 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/beige"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/beige"
     tools:context=".ResultActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/rounded_bg"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/gradient_bg"
         android:src="@drawable/rounded_bg" />
 
     <TextView
-        android:id="@+id/textView00"
+        android:id="@+id/tv_summary_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TipEasy"
+        android:fontFamily="@font/risque"
+        android:text="Tip Easy"
         android:textColor="@color/texts"
         android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/rounded_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_summary_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="RESUMO"
         android:textColor="@color/black"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/rounded_bg" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_description_summary_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="Veja abaixo o resumo da sua conta"
         android:textColor="@color/black"
-        android:layout_marginStart="20dp"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_summary_subtitle" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_total_table_summary_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
         android:text="Valor total da mesa:"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+        app:layout_constraintTop_toBottomOf="@+id/tv_description_summary_label" />
 
     <TextView
-        android:id="@+id/tv_ResConta"
+        android:id="@+id/tv_total_table_summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:layout_marginStart="50dp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/tv_total_table_summary_label"
         tools:text="R$ 100,00" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_number_people_summary_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="Quantidade de pessoas:"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+        app:layout_constraintTop_toBottomOf="@+id/tv_total_table_summary_label" />
 
     <TextView
-        android:id="@+id/tv_ResPessoas"
+        android:id="@+id/tv_num_people_summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginEnd="24dp"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/tv_number_people_summary_label"
         tools:text="5" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tv_percentage_summary_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="Porcentagem da gorjeta:"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_number_people_summary_label" />
 
     <TextView
-        android:id="@+id/tv_ResPorcentagem"
+        android:id="@+id/tv_percentage_summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginEnd="24dp"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
-        app:layout_constraintBottom_toTopOf="@+id/tv_ResConta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/tv_percentage_summary_label"
         tools:text="15%" />
 
-    <ImageView
-        android:id="@+id/imageViewResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/line"
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_percentage_summary_label" />
+
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tv_total_summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
         android:text="TOTAL:"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"/>
+        app:layout_constraintTop_toBottomOf="@id/separator" />
+
 
     <TextView
-        android:id="@+id/tv_ResTotal"
+        android:id="@+id/tv_account_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:layout_marginEnd="24dp"
         android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/tv_total_summary"
         tools:text="R$ 40,00" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_NovoCalculo"
+        android:id="@+id/btn_refresh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/custom_button2"
+        android:text="novo cálculo"
         android:textColor="@color/texts"
         android:textStyle="bold"
-        android:text="novo cálculo"
-        android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
