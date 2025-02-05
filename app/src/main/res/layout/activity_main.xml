@@ -29,8 +29,8 @@
         android:id="@+id/tv_steps_label"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="Preencha os campos abaixo para realizar o cálculo da sua conta"
         android:textColor="@color/black"
@@ -53,7 +53,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_total_account"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -72,7 +72,8 @@
             android:drawablePadding="16dp"
             android:hint="ex: 100,50"
             android:inputType="numberDecimal"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -89,7 +90,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_num_people"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -109,7 +110,8 @@
             android:hint="ex: 5"
             android:inputType="number"
             android:maxLength="3"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -126,7 +128,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_percentage"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -146,7 +148,8 @@
             android:hint="ex: 10%"
             android:inputType="number"
             android:maxLength="3"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.constraintlayout.widget.Guideline
