@@ -3,178 +3,187 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/beige"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/beige"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/rounded_bg"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/gradient_bg"
         android:src="@drawable/rounded_bg" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tv_title"
+        style="@style/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TipEasy"
-        android:textColor="@color/texts"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@id/rounded_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_steps_label"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Preencha os campos abaixo para realizar o cálculo da sua conta"
         android:textColor="@color/black"
-        android:layout_margin="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/rounded_bg" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_total_account_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
         android:text="Digite o valor da conta:"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        />
+        app:layout_constraintTop_toBottomOf="@id/tv_steps_label" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ti_Layout"
+        android:id="@+id/til_total_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@id/tv_total_account_label">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ti_ValorConta"
-            android:drawableStart="@drawable/cash"
-            android:drawablePadding="15dp"
+            android:id="@+id/tie_total_account"
             android:layout_width="match_parent"
-            android:inputType="numberDecimal"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/cash"
+            android:drawablePadding="16dp"
             android:hint="ex: 100,50"
-            android:background="@drawable/custom_input"/>
+            android:inputType="numberDecimal"
+            android:textColor="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_num_people_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="Quantidade de pessoas:"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ti_Layout"
-        />
+        app:layout_constraintTop_toBottomOf="@id/til_total_account" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ti_Layout2"
+        android:id="@+id/til_num_people"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
+        app:layout_constraintTop_toBottomOf="@id/tv_num_people_label">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ti_QtdPessoas"
-            android:drawableStart="@drawable/people"
-            android:drawablePadding="15dp"
-            android:maxLength="3"
-            android:inputType="number"
+            android:id="@+id/tie_num_people"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/people"
+            android:drawablePadding="15dp"
             android:hint="ex: 5"
-            android:background="@drawable/custom_input"/>
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_percentage_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="Porcentagem da gorjeta:"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ti_Layout2"
-        />
+        app:layout_constraintTop_toBottomOf="@id/til_num_people" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ti_Layout3"
+        android:id="@+id/til_percentage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toBottomOf="@id/tv_percentage_label">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ti_Porcentagem"
-            android:drawableStart="@drawable/percentage"
-            android:drawablePadding="15dp"
-            android:maxLength="3"
-            android:inputType="number"
+            android:id="@+id/tie_percentage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/percentage"
+            android:drawablePadding="16dp"
             android:hint="ex: 10%"
-            android:background="@drawable/custom_input"/>
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_Limpar"
-        android:layout_width="190dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_clean"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/custom_button"
         android:text="Limpar"
         android:textColor="@color/background"
         android:textStyle="bold"
-        android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_Calcular"
-        android:layout_width="190dp"
+        android:id="@+id/btn_calculate"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/custom_button2"
+        android:text="CALCULAR"
         android:textColor="@color/texts"
         android:textStyle="bold"
-        android:text="CALCULAR"
-        android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vertical_guideline" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
