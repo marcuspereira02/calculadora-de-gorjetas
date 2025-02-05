@@ -15,7 +15,7 @@ Esse projeto é um aplicativo Android nativo desenvolvido com a linguagem de pro
 <!-- You can add more screenshots here if you like -->
 <img src="https://github.com/user-attachments/assets/2f871af0-0a38-40d8-86a5-2914e045efa6" width=200/>
 <img src="https://github.com/user-attachments/assets/aa96faab-bb77-457b-873a-59035df011bc" width=200/>
-<img src="https://github.com/user-attachments/assets/5882f5d7-65d3-49d3-9323-44a7d25fdf8d" width=200/>
+<img src="https://github.com/user-attachments/assets/517b3aa5-bd65-4763-a810-a0e80a616ac2" width=200/>
 
 
 ## 🛠️ Tecnologias
