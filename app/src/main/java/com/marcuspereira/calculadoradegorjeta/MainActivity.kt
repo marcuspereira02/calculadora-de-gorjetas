@@ -32,28 +32,30 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnCalculate.setOnClickListener {
-            val valueAccountTemp = binding.tieTotalAccount.text.toString()
-            val numPeopleTemp = binding.tieNumPeople.text.toString()
-            val percentageTemp = binding.tiePercentage.text.toString()
+            val totalTableTemp = binding.tieTotalAccount.text
+            val nPeopleTemp = binding.tieNumPeople.text
+            val percentageTemp = binding.tiePercentage.text
 
-            if (valueAccountTemp == "" || numPeopleTemp == "" || percentageTemp == "") {
+            if (totalTableTemp?.isEmpty() == true || nPeopleTemp?.isEmpty() == true || percentageTemp?.isEmpty() == true) {
                 Snackbar.make(
-                    binding.tieTotalAccount,
-                    "Preencha todos os campos",
-                    Snackbar.LENGTH_LONG
+                    binding.tieTotalAccount, "Preencha todos os campos", Snackbar.LENGTH_LONG
                 ).show()
             } else {
-                val totalTip =
-                    valueAccountTemp.toFloat() * (percentageTemp.toInt() / 100) / numPeopleTemp.toInt()
-                val totalAccountWithTip =
-                    (valueAccountTemp.toFloat() / numPeopleTemp.toInt()) + totalTip
+
+                val totalTable = totalTableTemp.toString().toFloat()
+                val nPeople = nPeopleTemp.toString().toInt()
+                val percentage = percentageTemp.toString().toInt()
+
+                val forPeople = totalTable / nPeople
+                val tips = forPeople * percentage / 100
+                val totalWithTips = forPeople + tips
 
                 val intent = Intent(this, ResultActivity::class.java)
                 intent.apply {
-                    intent.putExtra("totalWithTips", totalAccountWithTip)
-                    intent.putExtra("valueAccount", valueAccountTemp.toFloat())
-                    intent.putExtra("numPeople", numPeopleTemp.toInt())
-                    intent.putExtra("percentage", percentageTemp.toInt())
+                    intent.putExtra("totalWithTips", totalWithTips)
+                    intent.putExtra("valueAccount", totalTable)
+                    intent.putExtra("numPeople", nPeople)
+                    intent.putExtra("percentage", percentage)
                 }
                 clean()
                 startActivity(intent)
