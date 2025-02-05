@@ -11,12 +11,11 @@ Esse projeto é um aplicativo Android nativo desenvolvido com a linguagem de pro
 
 - **Interface amigável:** Uma interface simples e intuitiva para facilitar a utilização.
 
-- **Formato monetário brasileiro:** Apresenta valores no formato R$ para melhor compreensão no Brasil.
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
-<img src="https://github.com/user-attachments/assets/0c36680c-664c-4884-a04f-0ce2570774ef" width=200/>
-<img src="https://github.com/user-attachments/assets/7ef00b65-22cb-40db-b7fc-a817c4373ddd" width=200/>
-<img src="https://github.com/user-attachments/assets/58bf5b98-36f0-4e66-8137-ef194e8e5d81" width=200/>
+<img src="https://github.com/user-attachments/assets/2f871af0-0a38-40d8-86a5-2914e045efa6" width=200/>
+<img src="https://github.com/user-attachments/assets/aa96faab-bb77-457b-873a-59035df011bc" width=200/>
+<img src="https://github.com/user-attachments/assets/5882f5d7-65d3-49d3-9323-44a7d25fdf8d" width=200/>
 
 
 ## 🛠️ Tecnologias
